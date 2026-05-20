@@ -1,0 +1,67 @@
+history -w
+history -w
+history
+ssh-keygen
+cat $HOME/.ssh/*.pub
+cd
+mkdir repogit
+cd repogit
+git clone github.com/lautarohernanledesma-hash/TP_AySO.git
+git clone git@github.com:lautarohernanledesma-hash/TP_AySO.git
+cd TU-REPO
+cd TP_AySO.git
+ls
+cd TP_AySO
+cd ~/repogit
+git clone git@github.com:lautarohernanledesma-hash/TP_AySO.git
+ls
+cd TP_AySO/
+pwd
+ls -l
+cat /etc/passwd
+man grep
+grep UBUNTU /etc/passwd
+grep ubuntu /etc/passwd
+grep -i ubuntu /etc/passwd
+grep UBUNTU /etc/passwd
+grep -i ubuntu /etc/passwd | awk -F: '{print $2}' > datos_usuario.txt
+cat datos_usuario.txt
+whoami
+echo "Usuario=$(whoami)" >> datos_usuario.txt
+cat datos_usuario.txt
+git add .
+git config --global user.email "tu_email"
+git config --global user.email "lautarohernanledesma90@gmail.com"
+git config --global user.name "lautarohernanledesma-hash"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuario.txt"
+git status
+git push origin main
+grep "model name" /proc/cpuinfo | head -n1 > info_pc.txt
+cat info_pc.txt
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git push origin main
+grep -v nologin /etc/passwd | head -n 10 | sort -t: -k7 > lista_ordenada
+git add lista_ordenada
+git commit -m "ADD: Listado de usuarios ordenada"
+git push origin main
+cat << EOF >> README.md
+Alumno: Lautaro Ledesma
+División: <Tu-División>
+Turno: <Turno>
+EOF
+
+git add README.md
+git commit -m "docs: agregar información del alumno al README"
+mkdir -p ~/TP1/arquitectura/clase{1..5} ~/TP1/so/clase{1..6}
+cd ~
+mkdir -p TP1/arquitectura/clase{1..5} TP1/so/clase{1..6}
+cd repogit
+cd TP_AySO
+nano script_dir.sh
+ls
+chmod +x script_dir.sh
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+history -a
